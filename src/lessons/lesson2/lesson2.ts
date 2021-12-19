@@ -60,6 +60,16 @@ counter();
 // reset: установить счетчик в 0;
 // set: установить счетчик в заданное значение;
 
+function makeObject(num: number) {
+  let initialCounter = num;
+  return {
+    increase() {return initialCounter += 1},
+    decrease() {return initialCounter -= 1},
+    reset() { initialCounter = 0},
+    set(n: number) {initialCounter = n},
+  }
+}
+
 // Task 04*
 // Реализовать функцию superSum которая принимает число в качестве аргумента, которое указывает на количество слагаемых
 // и что бы корректно работали следующие вызовы:
