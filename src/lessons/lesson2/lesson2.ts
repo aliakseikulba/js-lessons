@@ -65,8 +65,8 @@ function makeObject(num: number) {
   return {
     increase() {return initialCounter += 1},
     decrease() {return initialCounter -= 1},
-    reset() { initialCounter = 0},
-    set(n: number) {initialCounter = n},
+    reset() { return initialCounter = 0},
+    set(n: number) {return initialCounter = n},
   }
 }
 
